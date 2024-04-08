@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <h1>EECS 348 Lab 7 Practice 3</h1>
+</head>
+
+<body>
+    <!-- This is the java script code which deals with validating the password-->
+    <script>
+        function is_same() {
+            var first_password = document.getElementById('First_password').value;
+            var second_password = document.getElementById('Second_password').value;
+
+            if(first_password.length < 8){
+                alert("The length of the first password is less than 8 letters!");
+            }
+            else if(second_password.length < 8){
+                alert("The length of the second password is less than 8 letters!");
+            }
+            else if(first_password != second_password){
+                alert("The passwords don't match!");
+            }
+            else{
+                alert("Everything is good!")
+            }
+        }
+    </script>    
+<!--this functions get recive the user input and sets it to the id's which are used in the js function coded above-->
+    First Password: <input type="text" id="first_password">
+    <br>
+    Scond Password: <input type="text" id="second_password">
+    <br>
+    <button onclick="is_same()">Validate Your Passwords</button>
+</body>
+
+</html>
